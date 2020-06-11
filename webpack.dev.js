@@ -1,17 +1,13 @@
 const path =  require('path')
+const common = require('./webpack.common')
+const merge = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = {
+module.exports = merge(common, {
   mode: 'development',
-  entry: {
-    main: './src/index.js'
-  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].js'
-  },
-  resolve: {
-    extensions: ['.js']
   },
   devServer:{
     open: true
@@ -19,18 +15,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-      filename: 'index.html'
+      template: './public/index.html'
     })
   ]
-}
+})

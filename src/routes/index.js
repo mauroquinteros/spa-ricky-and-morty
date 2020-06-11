@@ -4,6 +4,9 @@ import Character from '../pages/Character'
 import Error from '../pages/Error'
 import Header from '../templates/Header'
 
+// styles
+import '../styles/style.scss'
+
 // utilities
 import getHash from '../utils/getHash'
 import resolveRoutes from '../utils/resolveRoutes'
