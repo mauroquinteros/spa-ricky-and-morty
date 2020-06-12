@@ -10,6 +10,17 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader']
+      },
+      {
+        test: /\.svg|png|jpg|gif|mp4$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 8142,
+            name: '[hash].[ext]',
+            outputPath: 'assets'
+          }
+        }
       }
     ]
   }
