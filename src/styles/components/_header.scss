@@ -1,0 +1,46 @@
+.header {
+  position: sticky;
+  top: 0;
+  height: 5rem;
+  background: map-get($colors, light);
+  padding: 1em 0;
+  &-content {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-logo {
+    height: inherit;
+    margin: 0;
+    a {
+      font-size: 2rem;
+      text-decoration: none;
+      -webkit-text-fill-color: map-get($colors, light);
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: map-get($colors, dark);
+    }
+  }
+  &-nav {
+    height: inherit;
+  }
+}
+.nav {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding: 0;
+  margin: 0;
+  &-item {
+    height: inherit;
+    list-style-type: none;
+    margin-right: 1em;
+    a {
+      color: map-get($colors, dark);
+      text-decoration: none;
+    }
+  }
+  &-item:last-child {
+    margin: 0;
+  }
+}

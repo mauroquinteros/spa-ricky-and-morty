@@ -1,8 +1,64 @@
+// sass variables
+$family: 'Rubik', sans-serif;
+$size: 16px;
+$colors: (
+  dark: #15302c,
+  light: #ffffff,
+  light-gray: #fbfbf7
+);
+
+// extends
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+%fade {
+  animation: fade 1.5s ease;
+}
+
+// global styles
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  background: lightcoral;
+  padding: 0;
+  font-family: $family;
+  font-size: $size;
+  color: map-get($colors, dark);
+  background: map-get($colors, light-gray);
+}
+figure {
+  margin: 0;
+  padding: 0;
 }
 .main {
   margin: 0 auto;
   text-align: center;
 }
+.u-wrapper {
+  height: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.link-flex {
+  @extend %flex-center;
+}
+
+// Animations
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// imports
+@import './components/header';
+@import './components/home';
+@import './components/character'

@@ -19,10 +19,9 @@ const routes = {
 
 // main function
 const router = async () => {
-  const header = null || document.querySelector('#header')
   const app = null || document.querySelector('#app')
 
-  header.innerHTML = Header()
+  app.innerHTML = Header()
 
   let hash = getHash()
   let route = await resolveRoutes(hash)
@@ -30,7 +29,7 @@ const router = async () => {
 
   // check if the route has a render function or display error 404
   let render = routes[route] ? routes[route] : Error
-  app.innerHTML = await render()
+  app.innerHTML += await render()
 }
 
 export default router
