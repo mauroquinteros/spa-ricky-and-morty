@@ -4,7 +4,7 @@ $size: 16px;
 $colors: (
   dark: #15302c,
   light: #ffffff,
-  light-gray: #fbfbf7
+  light-gray: #fbfbfb
 );
 
 // extends
@@ -61,4 +61,5 @@ figure {
 // imports
 @import './components/header';
 @import './components/home';
-@import './components/character'
+@import './components/character';
+@import './components/error';

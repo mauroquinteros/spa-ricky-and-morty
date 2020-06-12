@@ -13,8 +13,7 @@ import resolveRoutes from '../utils/resolveRoutes'
 
 const routes = {
   '/': Home,
-  '/:id': Character,
-  '/contact': 'Contact'
+  '/:id': Character
 }
 
 // main function

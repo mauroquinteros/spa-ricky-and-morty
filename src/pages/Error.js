@@ -1,6 +1,11 @@
 const Error = () => {
   const view = `
-    <h2>Error 404</h2>
+    <div class=u-wrapper>
+      <div class="error">
+        <img src="../../public/error.svg">
+        <h2>Error 404</h2>
+      </div>
+    </div>
   `
   return view
 }
